@@ -1,0 +1,140 @@
+
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import style
+'''
+x = np.random.random(100)*100
+y = np.random.random(100)*100
+plt.scatter(x,y,c='red',marker='*',s=150,alpha = 0.3)
+plt.show()
+'''
+
+'''
+years = [2006 + x for x in range (17)]
+weights = [80,83,84,85,86,79,83,82,81,80,85,83,82,84,80,75,73]
+
+plt.plot(years,weights,'r--',lw=3)
+plt.show()
+'''
+
+'''
+x = ["C++","C#","Python","Java","Go","Math"]
+y = [20,50,130,2,45,39]
+plt.bar(x,y,color='g',align='edge',width = 0.5,edgecolor = 'r',linewidth = 3)
+
+plt.show()
+'''
+
+'''
+ages =  np.random.normal(20,2.5,1000)
+plt.hist(ages,bins=20,cumulative=True)
+plt.show()'''
+
+
+
+'''
+langs = ["Python","C++","Java","C#","Go"]
+votes = [50,24,14,6,17]
+e=[0,0.1,0,0.2,0]
+
+plt.pie(votes,labels=langs,explode=e,autopct='%.2f%%',pctdistance=0.6,startangle=90)
+plt.show()
+'''
+
+
+'''
+heights = np.random.normal(172,8,300)
+plt.boxplot(heights)
+plt.show()
+
+
+first = np.linspace(0,10,25)
+second = np.linspace(10,200,25)
+third = np.linspace(200,210,25)
+fourth = np.linspace(210,230,25)
+
+data= np.concatenate((first,second,third,fourth))
+
+plt.boxplot(data)
+plt.show()
+'''
+
+'''
+years = [2028 + x for x in range(10)]
+income = [55,60,62,40,66,69,69,65,75,80]
+income_ticks = list(range(40,81,2))
+plt.plot(years,income)
+plt.title("Income of Omm(in rupees)",fontsize=25,fontname= "FreeSerif")
+plt.xlabel('Year')
+plt.ylabel('Annual income')
+plt.yticks(income_ticks,[f"{x}lakhs" for x in income_ticks])
+
+plt.show() 
+'''
+
+
+'''
+stock_a = [100,102,99,101,101,100,102]
+stock_b = [90,95,102,104,105,103,109]
+stock_c = [110,115,100,105,109,98,95]
+
+plt.plot(stock_a,label='Company1')
+plt.plot(stock_b,label='Company2')
+plt.plot(stock_c,label='Company3')
+
+plt.legend(loc='lower center')
+plt.show()
+'''
+
+'''
+people=['A','B','C','D',"E"]
+votes = [12,24,39,23,69]
+
+
+style.use('dark_background')
+plt.pie(votes,labels=None)
+plt.legend(labels=people)
+plt.show()
+'''
+
+
+'''
+x1,y1 = np.random.random(100),np.random.random(100)
+x2,y2 = np.arange(100),np.random.random(100)
+
+plt.figure(1)
+plt.scatter(x1,y1)
+
+plt.figure(2)
+plt.plot(x2,y2)
+
+plt.show()
+'''
+
+'''
+x = np.arange(100)
+
+fig,axs = plt.subplots(2,2)
+
+axs[0,0].plot(x,np.sin(x))
+axs[0,0].set_title("Sine Wave")
+
+axs[0,1].plot(x,np.log(x))
+axs[0,1].set_title("Logarithm")
+
+axs[1,0].plot(x,np.cos(x))
+axs[1,0].set_title("Cos Wave")
+
+axs[1,1].plot(x,np.exp(x))
+axs[1,1].set_title("Exponential")
+
+fig.suptitle("Four Functions")
+
+plt.tight_layout()
+
+plt.show()
+
+plt.savefig("Fourplots.png",dpi = 200,transparent=True )
+'''
+
+
